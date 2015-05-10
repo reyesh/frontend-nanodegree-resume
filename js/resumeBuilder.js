@@ -91,6 +91,39 @@ var projects = {
 }
 
 
+var education = {
+    "schools": [
+        {
+            "name": "Fresno State University",
+            "location": "Fresno, CA, US",
+            "degree": "BA",
+            "date": "July 1998 - May 2003",
+            "major": "Graphic Design",
+            "minor": "Computer Science",
+            "highlight": "Web Languages, Data Structures"
+        },
+        {
+            "name": "O'Reily School of Technology",
+            "location": "http://www.oreillyschool.com",
+            "degree": "Certification",
+            "date": "Jan 2013 - Nov 2013",
+            "major": "Database Administration",
+            "minor": "Linux Administration",
+            "highlight": "Set up Mondrian OLAP server on home server"
+        },
+        {
+            "name": "Udacity",
+            "location": "http://www.udacity.com",
+            "degree": "nanodegree",
+            "date": "March 2014 - Present",
+            "major": "Front End Web Developer",
+            "minor": "",
+            "highlight": "Went beyond project requirments"
+        }
+    ]
+}
+
+
 work.display = function () {
 
   for (i in work.jobs){
@@ -108,7 +141,6 @@ projects.display = function (){
 
 
   for (i in this.projects) {
-    console.log(i);
     $("#projects").append(HTMLprojectStart);
 
     formattedTitle = HTMLprojectTitle.replace("%data%", this.projects[i].title);
@@ -122,6 +154,25 @@ projects.display = function (){
 
 }
 
+education.display = function () {
+
+
+  for(i in this.schools){
+    $("#education").append(HTMLschoolStart);
+    console.log(this.schools[i].name);
+    formattedName = HTMLschoolName.replace("%data%", this.schools[i].name);
+    formattedDegree = HTMLschoolDegree.replace("%data%", this.schools[i].degree);
+    formattedDates = HTMLschoolDates.replace("%data%", this.schools[i].date);
+    formattedLocation = HTMLschoolLocation.replace("%data%", this.schools[i].location);
+    formattedMaj = HTMLschoolMajor.replace("%data%", this.schools[i].major);
+    formattedMin = HTMLschoolMinor.replace("%data%", this.schools[i].minor);
+//    formattedHlight = HTMLhighlight.replace("%data%",this.schools[i].highlight)
+    formattedSchool = formattedName + formattedDegree + formattedDates + formattedLocation + formattedMaj + formattedMin;
+    console.log(formattedSchool);
+    $(".education-entry:last").append(formattedSchool);
+  }
+}
 
 work.display();
 projects.display();
+education.display();
