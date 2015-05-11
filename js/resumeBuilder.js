@@ -1,20 +1,20 @@
 var bio = {
   "name" : "Reyes Herrera, Jr",
-  "Role" : "Front-End Web Developer",
+  "role" : "Front-End Web Developer",
   "contacts": {
-    "mobile" : "415 111 22222",
+    "mobile" : "(415) 124-2982",
     "email" : "sjobs@apple.com",
     "github" : "reyesh",
-    "twitter": "http://www.twitter.com/reyesh",
+    "twitter": "@reyesh",
     "facebook": "http://www.facebook.com/reyesh",
     "googleplus": "http://plus.google.com/reyesh",
     "linkedin": "http://www.linkedin.com/reyesh",
-    "location": "Sunnyvale, CA",
+    "location": "Sunnyvale, CA, USA",
     "youtube": "https://www.youtube.com/user/Reyesh"
   },
 
   "skills" : [
-    "HTML", "CSS" , "Javascript", "JSON", "JQuery"
+    "HTML", "CSS" , "Javascript", "JSON", "JQuery", "AnjularJS", "JADSDS", "Python"
   ],
 
   "bioPic": "images/fry.jpg",
@@ -89,7 +89,6 @@ var projects = {
     }
   ]
 }
-
 
 var education = {
     "schools": [
@@ -171,6 +170,53 @@ education.display = function () {
   }
 }
 
+bio.displayContact = function(){
+
+  for (i in bio.contacts){
+
+      switch (i) {
+        case "mobile":
+            formattedMobile = HTMLmobile.replace("%data%", bio.contacts[i]);
+            break;
+        case "email":
+            formattedEmail = HTMLemail.replace("%data%", bio.contacts[i]);
+            break;
+        case "github":
+            formattedGH = HTMLgithub.replace("%data%", bio.contacts[i]);
+            break;
+        case "twitter":
+            formattedTW = HTMLtwitter.replace("%data%", bio.contacts[i]);
+            break;
+          }
+  }
+
+  formattedContacts = formattedMobile + formattedEmail + formattedGH + formattedTW;
+  $("#footerContacts").append(formattedContacts);
+  $("#topContacts").append(formattedContacts);
+}
+
+bio.display = function () {
+
+ formattedName = HTMLheaderName.replace("%data%", this.name);
+ formattedRole = HTMLheaderRole.replace("%data%", this.role);
+ formattedBioPic = HTMLbioPic.replace("%data%", this.bioPic);
+ formattedWelMsg = HTMLwelcomeMsg.replace("%data%", this.msg[1]);
+
+ formattedSkills = "";
+ for(i in this.skills){
+   formattedSkills = formattedSkills +  HTMLskills.replace("%data%", this.skills[i]);
+ }
+
+ formattedSkillsStart = HTMLskillsStart.replace("%data%", formattedSkills);
+
+ $("#header").prepend(formattedName + formattedRole);
+ foramttedHeader = formattedBioPic + formattedWelMsg + formattedSkillsStart;
+ $("#header").append(foramttedHeader);
+
+}
+
 work.display();
 projects.display();
 education.display();
+bio.display();
+bio.displayContact();
