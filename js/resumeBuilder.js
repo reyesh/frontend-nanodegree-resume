@@ -220,3 +220,5 @@ projects.display();
 education.display();
 bio.display();
 bio.displayContact();
+
+$("#mapDiv").append(googleMap);
