@@ -57,9 +57,26 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link href="css/style2.css" rel="stylesheet" type="text/css">
 
 </head>
-<body unresolved>
+<body unresolved id="body2">
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <p class="navbar-brand">REYES HERRERA JR / <small>FRONT-END WEB DEVELOPER</small></p>
+      </div>
+      <div>
+        <ul class="nav navbar-nav pull-right">
+          <li class="active"><a href="#">Top</a></li>
+          <li><a href="#">Work Experience</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Map</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <div id="main" class="container">
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -68,14 +85,14 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     display by looking at the id or at what's written between the <h2> tags.
     -->
     <div id="header" class="row well center-content clearfix">
-      <ul id="topContacts" class='flex-box'></ul>
+      <ul id="topContacts" class='flex-box list-inline'></ul>
     </div>
     <div style='clear: both;'></div>
     <div id="workExperience" class='row well gray'>
       <h2>Work Experience</h2>
     </div>
     <div id="projects" class="row well" >
-      <h2>Projects<span class="badge">3</span></h2>
+      <h2>Projects</h2>
     </div>
     <div id="education" class='row well gray'>
       <h2>Education</h2>
@@ -85,7 +102,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
     <div id="letsConnect" class='row well dark-gray'>
       <h2 class='orange center-text'>Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
+        <ul id="footerContacts" class="flex-box list-inline">
       </ul>
     </div>
   </div>

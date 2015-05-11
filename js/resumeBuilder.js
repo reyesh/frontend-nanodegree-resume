@@ -208,7 +208,8 @@ bio.display = function () {
  }
 
  formattedSkillsStart = HTMLskillsStart.replace("%data%", formattedSkills);
-
+ formattedSkillsStart = formattedSkillsStart.replace("%data2%", this.skills.length)
+ 
  $("#header").prepend(formattedName + formattedRole);
  foramttedHeader = formattedBioPic + formattedWelMsg + formattedSkillsStart;
  $("#header").append(foramttedHeader);
