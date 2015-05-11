@@ -159,16 +159,14 @@ education.display = function () {
 
   for(i in this.schools){
     $("#education").append(HTMLschoolStart);
-    console.log(this.schools[i].name);
     formattedName = HTMLschoolName.replace("%data%", this.schools[i].name);
     formattedDegree = HTMLschoolDegree.replace("%data%", this.schools[i].degree);
     formattedDates = HTMLschoolDates.replace("%data%", this.schools[i].date);
     formattedLocation = HTMLschoolLocation.replace("%data%", this.schools[i].location);
     formattedMaj = HTMLschoolMajor.replace("%data%", this.schools[i].major);
     formattedMin = HTMLschoolMinor.replace("%data%", this.schools[i].minor);
-//    formattedHlight = HTMLhighlight.replace("%data%",this.schools[i].highlight)
-    formattedSchool = formattedName + formattedDegree + formattedDates + formattedLocation + formattedMaj + formattedMin;
-    console.log(formattedSchool);
+    formattedHlight = HTMLschoolhighlight.replace("%data%",this.schools[i].highlight)
+    formattedSchool = formattedName + formattedDegree + formattedDates + formattedLocation + formattedMaj + formattedMin + formattedHlight;
     $(".education-entry:last").append(formattedSchool);
   }
 }
