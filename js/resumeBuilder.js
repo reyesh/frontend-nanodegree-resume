@@ -73,19 +73,22 @@ var projects = {
       "title": "P1: Build a Portfolio Site",
       "dates": "March 2014",
       "description": "Homepage of all my web development projects",
-      "image": "http://placehold.it/197x148"
+      "image": "http://placehold.it/197x148",
+      "dataTarget": "#myp1"
     },
     {
       "title": "P2: Interactive Resume",
       "dates": "March 2014",
       "description": "Interactive resume using JavaScript, jQuery, JSON, and the bootstrap framework",
-      "image": "http://placehold.it/197x148"
+      "image": "http://placehold.it/197x148",
+      "dataTarget": "#myp2"
     },
     {
       "title": "P3: Classic Arcade Game Clone",
       "dates": "March 2014",
       "description": "With a game engine, and the visual assets I had to recreate the classic game Frogger",
-      "image": "http://placehold.it/197x148"
+      "image": "http://placehold.it/197x148",
+      "dataTarget": "#myp3"
     }
   ]
 }
@@ -147,7 +150,7 @@ projects.display = function (){
     formattedDate = HTMLprojectDates.replace("%data%", this.projects[i].dates);
     formattedDescription = HTMLprojectDescription.replace("%data%", this.projects[i].description);
     formattedImage = HTMLprojectImage.replace("%data%", this.projects[i].image);
-
+    formattedImage = formattedImage.replace("%data2%", this.projects[i].dataTarget);
     formattedProject = formattedTitle + formattedDate + formattedDescription + formattedImage;
     $(".project-entry:last").append(formattedProject);
   }
@@ -209,7 +212,7 @@ bio.display = function () {
  }
 
  formattedSkillsStart = HTMLskillsStart.replace("%data%", formattedSkills);
- formattedSkillsStart = formattedSkillsStart.replace("%data2%", this.skills.length)
+ formattedSkillsStart = formattedSkillsStart.replace("%data2%", this.skills.length);
 
  // $("#header").prepend(formattedName + formattedRole);
  // foramttedHeader = formattedBioPic + formattedWelMsg + formattedSkillsStart;
