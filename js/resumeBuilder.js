@@ -2,14 +2,14 @@ var bio = {
   "name" : "Reyes Herrera, Jr",
   "role" : "Front-End Web Developer",
   "contacts": {
-    "mobile" : "(415) 124-2982",
+    "mobile" : "+14151242982",
     "email" : "sjobs@apple.com",
     "github" : "reyesh",
-    "twitter": "@reyesh",
+    "twitter": "reyesh",
     "facebook": "http://www.facebook.com/reyesh",
     "googleplus": "http://plus.google.com/reyesh",
     "linkedin": "http://www.linkedin.com/reyesh",
-    "location": "Sunnyvale, CA, USA",
+    "location": "Sunnyvale,+CA,+USA",
     "youtube": "https://www.youtube.com/user/Reyesh"
   },
 
@@ -191,10 +191,13 @@ bio.displayContact = function(){
         case "twitter":
             formattedTW = HTMLtwitter.replace("%data%", bio.contacts[i]);
             break;
+        case "location":
+            formattedLocation = HTMLlocation.replace("%data%", bio.contacts[i]);
+            break;
           }
   }
 
-  formattedContacts = formattedMobile + formattedEmail + formattedGH + formattedTW;
+  formattedContacts = formattedMobile + formattedEmail + formattedGH + formattedTW + formattedLocation;
   $("#footerContacts").append(formattedContacts);
   //$("#topContacts").append(formattedContacts);
 }
