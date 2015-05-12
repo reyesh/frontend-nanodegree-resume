@@ -209,12 +209,21 @@ bio.display = function () {
 
  formattedSkillsStart = HTMLskillsStart.replace("%data%", formattedSkills);
  formattedSkillsStart = formattedSkillsStart.replace("%data2%", this.skills.length)
- 
- $("#header").prepend(formattedName + formattedRole);
+
+ // $("#header").prepend(formattedName + formattedRole);
  foramttedHeader = formattedBioPic + formattedWelMsg + formattedSkillsStart;
  $("#header").append(foramttedHeader);
 
 }
+
+bio.msgDisplay = function (){
+  var msg;
+  var x = Math.floor(Math.random()*(bio.msg.length) + 1);
+  msg = $("#bioMsg");
+  msg.text(bio.msg[x])
+}
+
+bio.msgDisplay();
 
 work.display();
 projects.display();
