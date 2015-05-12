@@ -30,3 +30,15 @@
   color: #e70b6f;
   text-shadow: 1px 1px 3px #657690;
 }
+
+.work-entry {
+  margin: 0 0 15px;
+}
+
+.education-entry {
+  margin: 0 0 20px;
+}
+
+.pspace {
+  margin: 10px 0 10px;
+}

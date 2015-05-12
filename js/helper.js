@@ -31,10 +31,10 @@ var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkTitle = ' - %data%</a><br>';
+var HTMLworkDates = '<div class="date-text pull-left">%data%</div>';
+var HTMLworkLocation = '<div class="location-text pull-right">%data%</div><br>';
+var HTMLworkDescription = '<p class="pspace">%data%</p>';
 
 var HTMLprojectStart = '<div class="col-md-4 project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
@@ -44,9 +44,9 @@ var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
+var HTMLschoolDegree = ' -- %data%</a><br>';
+var HTMLschoolDates = '<div class="date-text pull-left">%data%</div>';
+var HTMLschoolLocation = '<div class="location-text pull-right">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 var HTMLschoolMinor = '<em><br>Minor: %data%</em>';
 var HTMLschoolhighlight = '<div>Note: %data%</div>';

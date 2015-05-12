@@ -78,7 +78,7 @@ var projects = {
     {
       "title": "P2: Interactive Resume",
       "dates": "March 2014",
-      "description": "resume using JavaScript, jQuery, JSON",
+      "description": "Interactive resume using JavaScript, jQuery, JSON, and the bootstrap framework",
       "image": "http://placehold.it/197x148"
     },
     {
@@ -130,8 +130,9 @@ work.display = function () {
     formattedEmployer = HTMLworkEmployer.replace("%data%", this.jobs[i].employer);
     formattedTitle = HTMLworkTitle.replace("%data%", this.jobs[i].title);
     formattedDate = HTMLworkDates.replace("%data%", this.jobs[i].date);
+    formattedLocation = HTMLworkLocation.replace("%data%", this.jobs[i].location);
     formattedDes = HTMLworkDescription.replace("%data%", this.jobs[i].description);
-    formattedWork = formattedEmployer + formattedTitle + formattedDate + formattedDes + this.jobs[i].bPoints;
+    formattedWork = formattedEmployer + formattedTitle + formattedDate + formattedLocation + formattedDes + this.jobs[i].bPoints;
     $(".work-entry:last").append(formattedWork);
   }
 }
@@ -192,7 +193,7 @@ bio.displayContact = function(){
 
   formattedContacts = formattedMobile + formattedEmail + formattedGH + formattedTW;
   $("#footerContacts").append(formattedContacts);
-  $("#topContacts").append(formattedContacts);
+  //$("#topContacts").append(formattedContacts);
 }
 
 bio.display = function () {
@@ -211,7 +212,8 @@ bio.display = function () {
  formattedSkillsStart = formattedSkillsStart.replace("%data2%", this.skills.length)
 
  // $("#header").prepend(formattedName + formattedRole);
- foramttedHeader = formattedBioPic + formattedWelMsg + formattedSkillsStart;
+ // foramttedHeader = formattedBioPic + formattedWelMsg + formattedSkillsStart;
+ foramttedHeader = formattedSkillsStart;
  $("#header").append(foramttedHeader);
 
 }
