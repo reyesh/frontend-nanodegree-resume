@@ -43,11 +43,40 @@
 }
 
 .flex-item {
-  font-size: 50px;
+  display: inline-block;
+  font-size: 30px;
   padding-right: 20px;
   padding-left: 20px;
 }
 
+.brand-logo {
+  display: inline-block;
+  margin-top: 15px;
+  color: grey;
+}
+
+.brand-slash {
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
 @media screen and (max-width: 500px) {
-	body { background-color: green; }
+/*	body { background-color: green; } */
+  .brand-logo {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: grey;
+  }
+  .brand-slash {
+    display: none;
+  }
+  .brand-logo-bottom{
+    margin-top: -10px;
+  }
+  .brand-logo-top{
+    margin-top: 5px;
+  }
+
 }
