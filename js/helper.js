@@ -252,3 +252,7 @@ window.addEventListener('resize', function(e) {
   // Make sure the map bounds get updated on page resize
   map.fitBounds(mapBounds);
 });
+
+
+
+window.addEventListener("hashchange", function() { scrollBy(0, -70) })
