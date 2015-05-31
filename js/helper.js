@@ -43,7 +43,7 @@ var HTMLworkDates = '<div class="date-text pull-left">%data%</div>';
 var HTMLworkLocation = '<div class="location-text pull-right">%data%</div><br>';
 var HTMLworkDescription = '<p class="pspace">%data%</p>';
 
-var HTMLprojectStart = '<div class="col-md-4 project-entry"></div>';
+var HTMLprojectStart = '<div class="col-sm-6 col-md-4 project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
@@ -182,6 +182,7 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      infoWindow.open(map,marker);
     });
 
     // this is where the pin actually gets added to the map.

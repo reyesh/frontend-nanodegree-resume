@@ -142,7 +142,6 @@ work.display = function () {
 
 projects.display = function (){
 
-
   for (i in this.projects) {
     $("#projects").append(HTMLprojectStart);
 
