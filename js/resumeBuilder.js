@@ -69,33 +69,33 @@ var projects = {
       "title": "Interactive Resume",
       "dates": "May 2015",
       "description": "Interactive resume using JavaScript, jQuery, JSON, and the bootstrap",
-      "image": "http://placehold.it/197x148",
+      "image": "../images/p1tn.png",
       "url": "https://github.com/reyesh/frontend-nanodegree-resume",
       "mdID": "myp1",
       "mdLabel": "myModalLabel1",
-      "mdImage": "http://placehold.it/600x200",
+      "mdImage": "../images/200x600-resume.png",
       "mdDes": "Single-page, responsive application built with bootstrap framework, jquery and hosted on GitHub Pages. Developed scrolling message, project section expands according to your json object, added dynamic custom markers for the map based on places I lived and worked based on my json object."
     },
     {
       "title": "Classic Arcade Game Clone",
       "dates": "June 2015",
       "description": "With a game engine, and the visual assets I had to recreate the classic game Frogger",
-      "image": "http://placehold.it/197x148",
+      "image": "../images/arcade-tn.png",
       "url": "https://github.com/reyesh/frontend-nanodegree-arcade-game",
       "mdID": "myp2",
       "mdLabel": "myModalLabel2",
-      "mdImage": "http://placehold.it/600x200",
+      "mdImage": "../images/600x200-arcade.png",
       "mdDes": "Clone of the classic game, Frogger. Udacity provided the art assets and game engine. Coded player, enemies, and other game entities in JavaScript's object-oriented pseudo-classical style. Created a new player from a sprite sheet from Legend of Zelda, and made the player’s movements animate, added levels, and music."
     },
     {
       "title": "Drawing with Random",
       "dates": "May 2015",
       "description": "JavaScript class to create randomize paintings using html5 canvas",
-      "image": "http://placehold.it/197x148",
+      "image": "../images/p3tn.png",
       "url": "https://github.com/reyesh/html5-canvas-drawing-with-random",
       "mdID": "myp3",
       "mdLabel": "myModalLabel3",
-      "mdImage": "http://placehold.it/600x200",
+      "mdImage": "../images/200x600p3.png",
       "mdDes": "Used object oriented JS, functional class pattern with shared methods. Made use of requestAnimationFrame, and recursive functions."
     }
   ]
