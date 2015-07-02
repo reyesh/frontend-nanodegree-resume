@@ -14,7 +14,7 @@ var bio = {
   },
 
   "skills" : [
-    "HTML", "CSS" , "Javascript", "php", "MySQL","JSON", "JQuery", "bootstrap", "git/github", "photshop", "illustrator", "premiere", "IP networking", "Linux", "scripting (bash, perl, sed, awk)"
+    "HTML", "CSS" , "javaScript", "PHP", "MySQL","JSON", "JQuery", "bootstrap", "git/github", "Photoshop", "Illustrator", "Premiere", "IP networking", "Linux", "scripting (bash, perl, sed, awk)", "Windows", "Mac OS X"
   ],
 
   "bioPic": "images/fry.jpg",
@@ -54,7 +54,7 @@ var work = {
       "description": "Smart Hospitality Corporation helps hotels enhance their guest experience and increase revenue with Digital In-room Entertainment systems",
       "location": "Visalia, CA, USA",
       "bPoints": "<ul>\
-                    <li>Identifying/Resolving any computer/network related issue by analyzing on or off site.</li>\
+                    <li>Identifying/resolving any computer/network related issue by analyzing on or off site.</li>\
                     <li>Developed Automation Copying Software that formats, and copies data to USB drives. This reduced the time of the duplication process by 80%.</li>\
                     <li>Developed custom screens for hotel clients.</li>\
                     <li>Provided excellent customer support. Support was 24/7 for 50 hotels.</li>\
@@ -68,7 +68,7 @@ var projects = {
     {
       "title": "Interactive Resume",
       "dates": "May 2015",
-      "description": "Interactive resume using JavaScript, jQuery, JSON, and the bootstrap",
+      "description": "Interactive resume using javaScript, jQuery, JSON, and the bootstrap",
       "image": "../images/p1tn.png",
       "url": "https://github.com/reyesh/frontend-nanodegree-resume",
       "mdID": "myp1",
@@ -124,7 +124,7 @@ var education = {
         {
             "name": "Udacity",
             "location": "Mountain View, CA, USA",
-            "degree": "nanodegree",
+            "degree": "Nanodegree",
             "date": "March 2014 - Present",
             "major": "Front End Web Developer",
             "minor": "",
