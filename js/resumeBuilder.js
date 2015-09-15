@@ -2,7 +2,6 @@ var bio = {
   "name" : "Reyes Herrera, Jr",
   "role" : "Front-End Web Developer",
   "contacts": {
-    "mobile" : "+15598698324",
     "email" : "reyesh@gmail.com",
     "github" : "reyesh",
     "twitter": "reyesh",
@@ -67,6 +66,7 @@ var projects = {
   "projects": [
     {
       "title": "Interactive Resume",
+      "ID": "Project1",
       "dates": "May 2015",
       "description": "Interactive resume using javaScript, jQuery, JSON, and the bootstrap",
       "image": "../images/p1tn.png",
@@ -74,10 +74,12 @@ var projects = {
       "mdID": "myp1",
       "mdLabel": "myModalLabel1",
       "mdImage": "../images/200x600-resume.png",
+      "alt": "image of resume project",
       "mdDes": "Single-page, responsive application built with bootstrap framework, jquery and hosted on GitHub Pages. Developed scrolling message, project section expands according to your JSON object, added dynamic custom markers for the map based on places I lived and worked based on my JSON object."
     },
     {
       "title": "Classic Arcade Game Clone",
+      "ID": "Project2",
       "dates": "June 2015",
       "description": "With a game engine, and the visual assets I had to recreate the classic game Frogger",
       "image": "../images/arcade-tn.png",
@@ -85,10 +87,12 @@ var projects = {
       "mdID": "myp2",
       "mdLabel": "myModalLabel2",
       "mdImage": "../images/600x200-arcade.png",
+      "alt": "image of arcade project",
       "mdDes": "Clone of the classic game, Frogger. Udacity provided the art assets and game engine. Coded player, enemies, and other game entities in JavaScript's object-oriented pseudo-classical style. Created a new player from a sprite sheet from Legend of Zelda, and made the player’s movements animate, added levels, and music. Game can be played onlne at http://reye.sh/p3"
     },
     {
       "title": "Drawing with Random",
+      "ID": "Project3",
       "dates": "May 2015",
       "description": "JavaScript class to create randomize paintings using html5 canvas",
       "image": "../images/p3tn.png",
@@ -96,6 +100,7 @@ var projects = {
       "mdID": "myp3",
       "mdLabel": "myModalLabel3",
       "mdImage": "../images/200x600p3.png",
+      "alt": "image of Drawing with Random project",
       "mdDes": "Used object oriented JS, functional class pattern with shared methods. Made use of requestAnimationFrame, and recursive functions."
     }
   ]
@@ -185,13 +190,15 @@ work.display = function () {
 projects.display = function (){
 //mdDes
   for (i in this.projects) {
-    $("#projects").append(HTMLprojectStart);
+
+    $("#projects").append(HTMLprojectStart.replace("%data%", this.projects[i].ID));
     formattedTitle = HTMLprojectTitle.replace("%data%", this.projects[i].title);
     formattedTitle = formattedTitle.replace("%data2%", this.projects[i].url);
     formattedDate = HTMLprojectDates.replace("%data%", this.projects[i].dates);
     formattedDescription = HTMLprojectDescription.replace("%data%", this.projects[i].description);
     formattedImage = HTMLprojectImage.replace("%data%", this.projects[i].image);
     formattedImage = formattedImage.replace("%data2%", "#"+this.projects[i].mdID);
+    formattedImage = formattedImage.replace("%data3%", this.projects[i].alt);
     formattedProject = formattedTitle + formattedDate + formattedDescription + formattedImage;
     $(".project-entry:last").append(formattedProject);
     //Adding the modal
@@ -244,8 +251,9 @@ education.display = function () {
 
 bio.displayContact = function(){
 
-  for (i in bio.contacts){
+  var formattedMobile = formattedEmail = formattedGH = formattedTW = formattedLocation ="";
 
+  for (i in bio.contacts){
       switch (i) {
         case "mobile":
             formattedMobile = HTMLmobile.replace(/%data%/g, bio.contacts[i]);
@@ -264,8 +272,15 @@ bio.displayContact = function(){
             break;
           }
   }
+  if (!formattedMobile) {
+    console.log("nothing in formattedMobile!");
+  }
+  if (formattedMobile) {
+    console.log("something in formattedMobile!");
+  }
 
   formattedContacts = formattedMobile + formattedEmail + formattedGH + formattedTW + formattedLocation;
+  console.log(formattedContacts);
   $("#footerContacts").append(formattedContacts);
   //$("#topContacts").append(formattedContacts);
 }
