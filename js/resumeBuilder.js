@@ -298,8 +298,8 @@ bio.display = function () {
  }
 
  formattedSkillsStart = HTMLskillsStart.replace("%data%", formattedSkills);
- formattedSkillsStart = formattedSkillsStart.replace("%data2%", this.skills.length);
-
+ //formattedSkillsStart = formattedSkillsStart.replace("%data2%", this.skills.length);
+ $('.badge').append(this.skills.length);
  // $("#header").prepend(formattedName + formattedRole);
  // foramttedHeader = formattedBioPic + formattedWelMsg + formattedSkillsStart;
  foramttedHeader = formattedSkillsStart;
