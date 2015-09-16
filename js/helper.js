@@ -28,6 +28,7 @@ var HTMLemail = '<li class="flex-item"><a href="mailto:%data%" data-toggle="popo
 var HTMLtwitter = '<li class="flex-item"><a href="https://twitter.com/%data%" data-toggle="popover" data-content="%data%" data-placement="top"><i class="fa fa-twitter"></i></a></li>';
 var HTMLgithub = '<li class="flex-item"><a href="https://github.com/%data%" data-toggle="popover" data-content="%data%" data-placement="top"><i class="fa fa-github-alt"></i></a></li>';
 var HTMLlocation = '<li class="flex-item"><a href="https://www.google.com/maps/place/%data%" data-toggle="popover" data-content="%data%" data-placement="top"><i class="fa fa-location-arrow"></i></a></li>';
+var HTMLLinkedIn = '<li class="flex-item"><a href="https://www.linkedin.com/in/%data%" data-toggle="popover" data-content="%data%" data-placement="top"><i class="fa fa-linkedin-square"></i></a></li>';
 
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';

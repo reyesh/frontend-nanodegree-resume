@@ -7,7 +7,7 @@ var bio = {
     "twitter": "reyesh",
     "facebook": "http://www.facebook.com/reyesh",
     "googleplus": "http://plus.google.com/+reyesh",
-    "linkedin": "http://www.linkedin.com/reyesh",
+    "linkedin": "reyesh",
     "location": "Sunnyvale,+CA,+USA",
     "youtube": "https://www.youtube.com/user/Reyesh"
   },
@@ -251,7 +251,7 @@ education.display = function () {
 
 bio.displayContact = function(){
 
-  var formattedMobile = formattedEmail = formattedGH = formattedTW = formattedLocation ="";
+  var formattedMobile = formattedEmail = formattedGH = formattedTW = formattedLocation = formattedLinkedIn = "";
 
   for (i in bio.contacts){
       switch (i) {
@@ -267,6 +267,9 @@ bio.displayContact = function(){
         case "twitter":
             formattedTW = HTMLtwitter.replace(/%data%/g, bio.contacts[i]);
             break;
+        case "linkedin":
+            formattedLinkedIn = HTMLLinkedIn.replace(/%data%/g, bio.contacts[i]);
+            break;
         case "location":
             formattedLocation = HTMLlocation.replace(/%data%/g, bio.contacts[i]);
             break;
@@ -279,7 +282,7 @@ bio.displayContact = function(){
     console.log("something in formattedMobile!");
   }
 
-  formattedContacts = formattedMobile + formattedEmail + formattedGH + formattedTW + formattedLocation;
+  formattedContacts = formattedMobile + formattedEmail + formattedLinkedIn + formattedGH + formattedTW + formattedLocation;
   console.log(formattedContacts);
   $("#footerContacts").append(formattedContacts);
   //$("#topContacts").append(formattedContacts);
