@@ -26,6 +26,14 @@
   color: #e70b6f;
 }
 
+.section-icons {
+  float: right;
+  font-size: 34px;
+  margin-top: 20px;
+  color: #e70b6f;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 414px) {
   .jumbotron {
       background-image: url('../images/bkgnd-crowd-mobile-2x.png');
